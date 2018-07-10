@@ -243,6 +243,7 @@ func createOrUpdateChannel(reqCtx reqContext.Context, txh *txn.TransactionHeader
 	channelHeaderOpts := txn.ChannelHeaderOpts{
 		TxnHeader:   txh,
 		TLSCertHash: ccomm.TLSCertHash(ctx.EndpointConfig()),
+		Version:     request.Version,
 	}
 	channelHeader, err := txn.CreateChannelHeader(common.HeaderType_CONFIG_UPDATE, channelHeaderOpts)
 	if err != nil {

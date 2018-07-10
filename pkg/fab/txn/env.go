@@ -121,6 +121,7 @@ type ChannelHeaderOpts struct {
 	ChaincodeID string
 	Timestamp   time.Time
 	TLSCertHash []byte
+	Version     int32
 }
 
 // CreateChannelHeader is a utility method to build a common chain header (TODO refactor)
@@ -134,6 +135,7 @@ func CreateChannelHeader(headerType common.HeaderType, opts ChannelHeaderOpts) (
 		TxId:        string(opts.TxnHeader.id),
 		Epoch:       opts.Epoch,
 		TlsCertHash: opts.TLSCertHash,
+		Version:     opts.Version,
 	}
 
 	if opts.Timestamp.IsZero() {

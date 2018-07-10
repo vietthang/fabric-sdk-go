@@ -30,6 +30,8 @@ type CreateChannelRequest struct {
 	// required by the channel create policy when using the `apiconfig` parameter.
 	// see signChannelConfig() method of this package
 	Signatures []*common.ConfigSignature
+	// optional - current version of channel, used when updating channel
+	Version int32
 }
 
 // InstallChaincodeRequest requests chaincode installation on the network

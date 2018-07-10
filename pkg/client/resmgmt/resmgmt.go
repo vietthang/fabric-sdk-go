@@ -109,6 +109,7 @@ type SaveChannelRequest struct {
 	ChannelConfig     io.Reader             // ChannelConfig data source
 	ChannelConfigPath string                // Convenience option to use the named file as ChannelConfig reader
 	SigningIdentities []msp.SigningIdentity // Users that sign channel configuration
+	Version           int32
 	// TODO: support pre-signed signature blocks
 }
 
@@ -879,6 +880,7 @@ func (rc *Client) SaveChannel(req SaveChannelRequest, options ...RequestOption) 
 		Orderer:    orderer,
 		Config:     chConfig,
 		Signatures: configSignatures,
+		Version:    req.Version,
 	}
 
 	reqCtx, cancel := rc.createRequestContext(opts, fab.OrdererResponse)
