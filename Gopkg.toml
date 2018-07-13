@@ -10,7 +10,7 @@
 
 [[constraint]]
   name = "github.com/spf13/viper"
-  branch = "master"
+  revision = "1967d93db724f4a5c0e101307e96d82ff520a067"
 
 [[constraint]]
   name = "google.golang.org/grpc"
