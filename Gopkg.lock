@@ -60,8 +60,7 @@
     "ptypes/duration",
     "ptypes/timestamp"
   ]
-  revision = "925541529c1fa6821df4e44ce2723319eb2be768"
-  version = "v1.0.0"
+  revision = "fec3b39b059c0f88fa6b20f5ed012b1aa203a8b4"
 
 [[projects]]
   name = "github.com/google/certificate-transparency-go"
@@ -267,6 +266,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "7af7de1871b83d01ba8e8b9cbc4787572073c04d71c29c23f5028de987e840ef"
+  inputs-digest = "7d95d40ba1e80f4ee43e18b0d25f4801ca5ec23bd3b7563d8d7be0e3f2f6594a"
   solver-name = "gps-cdcl"
   solver-version = 1
